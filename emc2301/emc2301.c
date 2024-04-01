@@ -341,7 +341,11 @@ static int emc2301_enable_rpm_control(struct emc2301_data *data, u16 fan_dev, bo
 	return ret;
 };
 
+#if LINUX_VERSION_CODE < KERNEL_VERSION(6, 3, 0)
+static int emc2301_i2c_probe(struct i2c_client *i2c, const struct i2c_device_id *id)
+#else
 static int emc2301_i2c_probe(struct i2c_client *i2c)
+#endif
 {
 	struct device *hwmon_dev;
 	struct device_node *of_node = i2c->dev.of_node;
