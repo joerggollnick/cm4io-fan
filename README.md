@@ -2,8 +2,6 @@
 
 kernel module and device tree overlay to add support for the EMC2301 fan controller on the Raspberry Pi Compute Module 4 IO Board.
 
-*Works with 5.10+ 64-bit kernels only.*
-
 Uses Traverse Technologies' EMC2301 [hwmon driver](https://gitlab.traverse.com.au/ls1088firmware/traverse-sensors) for their [ten64](https://www.crowdsupply.com/traverse-technologies/ten64) board, which you should definitely check out because it's awesome.
 
 ## Usage
@@ -68,5 +66,6 @@ Params: minrpm              RPM target for the fan when the SoC is below
 ```
 
 ### many thanks to:
+- [neggles/cm4io-fan](https://github.com/neggles/cm4io-fan) original work and [lukweb for the comment](https://github.com/neggles/cm4io-fan/issues/18#issuecomment-1957318686)
 - [taudac/taudac-driver-dkms](https://github.com/taudac/taudac-driver-dkms) for helping me work out how the shit DKMS works
 - [Traverse Technologies](https://traverse.com.au) for the [kernel module](https://gitlab.traverse.com.au/ls1088firmware/traverse-sensors)
