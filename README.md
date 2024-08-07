@@ -38,7 +38,7 @@ sudo apt install dkms
 ```
 mkdir -p ~/src
 cd ~/src
-git clone https://github.com/neg2led/cm4io-fan.git
+git clone https://github.com/joerggollnick/cm4io-fan.git
 cd cm4io-fan
 ```
 3. Run install.sh, feel free to inspect it yourself first. It will archive the current HEAD to /usr/src with an appropriate version, and run DKMS.
